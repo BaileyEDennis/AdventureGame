@@ -3,7 +3,7 @@ using Spectre.Console;
 
 namespace AdventureGame.Intro
 {
-    public static class Creation
+    class Creation
     {
         public static string CharacterName { get; set; }
         public static bool Confirm { get; set; }

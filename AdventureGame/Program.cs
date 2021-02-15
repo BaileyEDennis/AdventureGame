@@ -1,11 +1,6 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using Spectre.Console;
-using System.Globalization;
 using AdventureGame.Intro;
+using Spectre.Console;
 
 namespace AdventureGame
 {
@@ -13,8 +8,19 @@ namespace AdventureGame
     {
         static void Main(string[] args)
         {
+            bool skip = false;
             Creation.characterCreation();
-            Tutorial.TutorialTime();
+            skip = AnsiConsole.Confirm($"[wheat1]Do you want to skip the tutorial?[/]");
+            if (skip != true)
+            {
+               Tutorial.TutorialTime();
+            }
+            AnsiConsole.Markup($"[wheat1]Let's Begin...[/]\n");
+            Console.ReadKey();
+            Console.Clear();
+            var title = new Rule("[red]Ruins of Morheim[/]");
+            title.Centered();
+            AnsiConsole.Render(title);            
         }
     }
 }
