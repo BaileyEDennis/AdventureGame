@@ -7,20 +7,14 @@ namespace AdventureGame
     class Program
     {
         static void Main(string[] args)
-        {
-            bool skip = false;
+        { 
             Creation.characterCreation();
-            skip = AnsiConsole.Confirm($"[wheat1]Do you want to skip the tutorial?[/]");
-            if (skip != true)
-            {
-               Tutorial.TutorialTime();
-            }
-            AnsiConsole.Markup($"[wheat1]Let's Begin...[/]\n");
-            Console.ReadKey();
+            //Main game here
             Console.Clear();
-            var title = new Rule("[red]Ruins of Morheim[/]");
+            var title = new Rule("[red]Ruins Of Morheim[/]");
             title.Centered();
-            AnsiConsole.Render(title);            
+            AnsiConsole.Render(title);
+            AnsiConsole.Markup("[lime]Placeholder for future[/] [red]development...[/]");
         }
     }
 }
