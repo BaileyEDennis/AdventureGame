@@ -1,0 +1,8 @@
+﻿TODO's:
+-redo tutorial
+-styling
+-figure out how to move items in and out of inventory system
+-rename / naming conventions?
+-figure out how to add this to the .gitignore
+
+Notes:
